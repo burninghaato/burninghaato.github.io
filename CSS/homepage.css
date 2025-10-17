@@ -1,0 +1,279 @@
+* {
+ 	margin: 0;
+ 	padding: 0;
+ }
+
+body {
+  min-height: 100vh;
+  background-image: url(../Assets/Background.jpg);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav {
+  width: 100%;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  background-color: #FFCB05;
+  font-size: 16px;
+  height: 50px;
+}
+
+nav ul{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+nav li {
+  height: 50px;
+}
+
+nav a {
+  height: 100%;
+  padding: 0 30px;
+  display: flex;
+  color: black;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+}
+
+nav a.right {
+  justify-content: flex-end;
+}
+
+nav a:hover {
+  background-color: #9FCAED;
+  color: black
+}
+
+nav li:first-child{
+  margin-right: auto;
+}
+
+.sidebar {
+  height: 100vh;
+  width: 200px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #ffcd0561;
+  backdrop-filter: blur(10px);
+  z-index: 999;
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.2);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.sidebar .fullWidth{
+  width: 100%;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  width: 150px;
+  height: 50px;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a background color to navbar links on hover */
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: #9FCAED;
+  color: black;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff1bb;
+  width: 150px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  text-decoration: none;
+  display: block;
+  align-content: center;
+  text-align: center;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #d2ecff;
+}
+
+.dropdown-content .active {
+  color: white
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.active {
+  background-color: #0156AA;
+  color: white;
+}
+
+.active a {
+  color: white;
+}
+
+.menu-button {
+  display: none;
+}
+
+.header {
+  display: block;
+  text-align: center;
+  background-color: #9fcaed80;
+  padding: 60px 0;
+}
+
+h1 {
+  color: black;
+  font-size: 64px;
+  padding: 0;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.textWall {
+  width: auto;
+  margin: 50px 150px;
+  background-color: #ffffff22;
+  padding: 20px 40px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.textWall p {
+  font-size: 24px;
+  color: black;
+  line-height: 2em;
+  margin-top: 20px;
+}
+
+.textWall .big {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #9fcaed80;
+  margin-top: 50px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
+  gap: 2em;
+  margin: 50px;
+}
+
+.item img {
+  object-fit: fill;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media(max-width: 944px) {
+  .hideOnMobile {
+    display: none;
+  }
+
+  .menu-button {
+    display: block;
+  }
+
+  .textWall {
+    margin: 50px 20px;
+    padding: 20px;
+  }
+}
+
+@media(max-width: 750px) {
+  h1{
+    font-size: 42px;
+  }
+
+  .textWall p {
+    font-size: 20px;
+    line-height: 1.8em;
+  }
+
+  .textWall .big {
+    font-size: 28px;
+  }
+
+  .gallery {
+    margin: 20px;
+    gap: 1.5em;
+  }
+}
+
+@media(max-width: 480px) {
+  .sidebar {
+    width: 100%;
+  }
+
+  .header {
+    padding: 30px 0;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  .logo img {
+    width: 30px;
+    height: 30px;
+  }
+
+  nav{
+    height: 40px;
+  }
+
+  nav li{
+    height: 40px;
+  }
+
+  .textWall {
+    margin: 20px;
+  }
+
+  .textWall p {
+    font-size: 18px;
+    line-height: 1.5em;
+}
+
+  .textWall .big {
+    font-size: 24px;
+  }
+}
